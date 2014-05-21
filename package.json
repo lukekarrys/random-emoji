@@ -1,0 +1,33 @@
+{
+  "name": "random-emoji",
+  "description": "Flavors of random emoji: fortunes, haikus, etc.",
+  "version": "0.1.0",
+  "author": "Luke Karrys <luke@lukekarrys.com>",
+  "bugs": {
+    "url": "https://github.com/lukekarrys/random-emoji/issues"
+  },
+  "dependencies": {
+    "emoji-named-characters": "^0.1.0",
+    "shuffle-array": "0.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.1",
+    "lab": "^3.2.1",
+    "precommit-hook": "^1.0.2"
+  },
+  "homepage": "https://github.com/lukekarrys/random-emoji",
+  "keywords": [
+    "emoji",
+    "haiku",
+    "fortune"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lukekarrys/random-emoji.git"
+  },
+  "scripts": {
+    "test": "./node_modules/lab/bin/lab -t 100"
+  }
+}
