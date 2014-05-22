@@ -1,7 +1,7 @@
 {
   "name": "random-emoji",
   "description": "Flavors of random emoji: fortunes, haikus, etc.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Luke Karrys <luke@lukekarrys.com>",
   "bugs": {
     "url": "https://github.com/lukekarrys/random-emoji/issues"

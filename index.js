@@ -31,7 +31,7 @@ exports.random = function (options) {
     if (!options) {
         options = {};
     }
-    return shuffle.pick(emojiNames, options.count || 3).map(mapEmoji(options));
+    return shuffle.pick(emojiNames.slice(), options.count || 3).map(mapEmoji(options));
 };
 
 
@@ -74,7 +74,7 @@ function fetchSyllables(count, randomEmoji) {
 
 exports.haiku = function (options) {
     var asEmoji = mapEmoji(options || {});
-    var randomEmoji = shuffle(emojiNames, true);
+    var randomEmoji = shuffle(emojiNames.slice(), true);
     return [
         fetchSyllables(5, randomEmoji).map(asEmoji),
         fetchSyllables(7, randomEmoji).map(asEmoji),
