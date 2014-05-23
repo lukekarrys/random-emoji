@@ -1,6 +1,6 @@
 var emojis = require('emoji-named-characters');
 var shuffle = require('shuffle-array');
-var emojiNames = Object.keys(emojis.mapping);
+var emojiNames = Object.keys(emojis);
 
 function imgSrc(host, name) {
     if (!host) {
@@ -18,7 +18,7 @@ function emojiImage(host, name, height) {
 function mapEmoji(options) {
     return function (emoji) {
         return {
-            character: emojis.mapping[emoji],
+            character: emojis[emoji].character,
             name: emoji,
             image: emojiImage(options.host, emoji, options.height),
             imageSrc: imgSrc(options.host, emoji)
@@ -35,22 +35,6 @@ exports.random = function (options) {
 };
 
 
-function countSyllables(sentence) {
-    var total = 0;
-    var count = function (word) {
-        var check = word.replace(/[^a-zA-Z]/g, '');
-        check = check.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '').replace(/^y/, '');
-        var syllables = check.match(/[aeiouy]{1,2}/g);
-        return syllables ? syllables.length : 0;
-    };
-
-    sentence.split(/[\W]+/).forEach(function (word) {
-        total += count(word);
-    });
-
-    return total;
-}
-
 function fetchSyllables(count, randomEmoji) {
     var result = [];
     var current = 0;
@@ -59,9 +43,9 @@ function fetchSyllables(count, randomEmoji) {
 
     while (current < count) {
         currentEmoji = randomEmoji.pop();
-        emojiCount = countSyllables(currentEmoji);
+        emojiCount = emojis[currentEmoji].syllables;
 
-        if ((current + emojiCount) > count) {
+        if (emojiCount === 0 || (current + emojiCount) > count) {
             continue;
         }
 
