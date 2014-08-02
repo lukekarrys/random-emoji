@@ -7,13 +7,12 @@
     "url": "https://github.com/lukekarrys/random-emoji/issues"
   },
   "dependencies": {
-    "emoji-named-characters": "^0.2.0",
+    "emoji-named-characters": "^1.0.0",
     "shuffle-array": "0.0.0"
   },
   "devDependencies": {
-    "jshint": "^2.5.1",
     "lab": "^3.2.1",
-    "precommit-hook": "^1.0.2"
+    "precommit-hook": "^1.0.5"
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
   "keywords": [
