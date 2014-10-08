@@ -1,6 +1,10 @@
 random-emoji
 =================
 
+[![NPM](https://nodei.co/npm/random-emoji.png)](https://nodei.co/npm/random-emoji/)
+[![Build Status](https://travis-ci.org/lukekarrys/random-emoji.png?branch=master)](https://travis-ci.org/lukekarrys/random-emoji)
+
+
 Get random emoji!
 
 

@@ -27,6 +27,6 @@
     "url": "git@github.com:lukekarrys/random-emoji.git"
   },
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -t 95"
+    "test": "./node_modules/lab/bin/lab -t 98"
   }
 }
