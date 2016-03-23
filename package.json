@@ -7,12 +7,13 @@
     "url": "https://github.com/lukekarrys/random-emoji/issues"
   },
   "dependencies": {
-    "emoji-named-characters": "^1.0.0",
-    "shuffle-array": "0.0.0"
+    "emoji-named-characters": "^1.0.2",
+    "lodash.shuffle": "^4.0.0"
   },
   "devDependencies": {
-    "lab": "^3.2.1",
-    "precommit-hook": "^1.0.5"
+    "code": "^2.1.1",
+    "lab": "^10.3.0",
+    "precommit-hook": "^3.0.0"
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
   "keywords": [
@@ -27,6 +28,13 @@
     "url": "git@github.com:lukekarrys/random-emoji.git"
   },
   "scripts": {
-    "test": "./node_modules/lab/bin/lab -t 98"
-  }
+    "test": "lab -t 98",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }

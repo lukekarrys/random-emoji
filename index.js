@@ -1,5 +1,5 @@
 var emojis = require('emoji-named-characters');
-var shuffle = require('shuffle-array');
+var shuffle = require('lodash.shuffle');
 var emojiNames = Object.keys(emojis);
 
 function imgSrc(host, name) {
@@ -31,7 +31,7 @@ exports.random = function (options) {
     if (!options) {
         options = {};
     }
-    return shuffle.pick(emojiNames.slice(), options.count || 3).map(mapEmoji(options));
+    return shuffle(emojiNames.slice(0)).slice(0, options.count || 3).map(mapEmoji(options));
 };
 
 
@@ -58,7 +58,7 @@ function fetchSyllables(count, randomEmoji) {
 
 exports.haiku = function (options) {
     var asEmoji = mapEmoji(options || {});
-    var randomEmoji = shuffle(emojiNames.slice(), true);
+    var randomEmoji = shuffle(emojiNames.slice(0));
     return [
         fetchSyllables(5, randomEmoji).map(asEmoji),
         fetchSyllables(7, randomEmoji).map(asEmoji),
