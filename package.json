@@ -8,33 +8,34 @@
   },
   "dependencies": {
     "emoji-named-characters": "^1.0.2",
-    "lodash.shuffle": "^4.0.0"
+    "lodash.shuffle": "^4.1.0"
   },
   "devDependencies": {
-    "code": "^2.1.1",
-    "lab": "^10.3.0",
-    "precommit-hook": "^3.0.0"
+    "code": "^3.0.2",
+    "git-validate": "^2.1.4",
+    "lab": "^10.9.0",
+    "standard": "^7.1.2"
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
   "keywords": [
     "emoji",
-    "haiku",
-    "fortune"
+    "fortune",
+    "haiku"
   ],
   "license": "MIT",
   "main": "index.js",
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:lukekarrys/random-emoji.git"
   },
   "scripts": {
+    "lint": "standard",
     "test": "lab -t 98",
-    "lint": "jshint .",
     "validate": "npm ls"
-  },
-  "pre-commit": [
-    "lint",
-    "validate",
-    "test"
-  ]
+  }
 }
