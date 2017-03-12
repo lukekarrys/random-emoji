@@ -13,7 +13,7 @@
   "devDependencies": {
     "code": "^4.0.0",
     "git-validate": "^2.1.4",
-    "lab": "^12.1.0",
+    "lab": "^13.0.1",
     "standard": "^9.0.0"
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
