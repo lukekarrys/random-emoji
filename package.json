@@ -12,10 +12,15 @@
   },
   "devDependencies": {
     "code": "^4.1.0",
-    "eslint": "^4.1.1",
+    "eslint": "^3.19.0",
     "git-validate": "^2.2.2",
     "lab": "^14.1.0",
     "standard": "^10.0.2"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "eslint"  
+    ]
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
   "keywords": [
