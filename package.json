@@ -11,7 +11,7 @@
     "lodash.shuffle": "^4.2.0"
   },
   "devDependencies": {
-    "code": "^4.1.0",
+    "code": "^5.0.0",
     "eslint": "^3.19.0",
     "git-validate": "^2.2.2",
     "lab": "^14.1.0",
