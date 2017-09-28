@@ -11,7 +11,7 @@
     "lodash.shuffle": "^4.2.0"
   },
   "devDependencies": {
-    "code": "^5.0.0",
+    "code": "^4.1.0",
     "eslint": "^3.19.0",
     "git-validate": "^2.2.2",
     "lab": "^14.1.0",
@@ -19,7 +19,9 @@
   },
   "greenkeeper": {
     "ignore": [
-      "eslint"  
+      "code",
+      "eslint",
+      "lab"
     ]
   },
   "homepage": "https://github.com/lukekarrys/random-emoji",
